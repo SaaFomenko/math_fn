@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(math_fn)
 
+add_subdirectory(./lib)
+
 # set the C++ standard
 set(CMAKE_CXX_STANDARD 11)
 
