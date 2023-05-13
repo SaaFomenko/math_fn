@@ -1,3 +1,0 @@
-[submodule "lib/str_split"]
-	path = lib/str_split
-	url = git@github.com:SaaFomenko/str_split.git
