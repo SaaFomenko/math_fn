@@ -11,6 +11,19 @@ namespace math_fn
 	{
 		return obj * obj;
 	}
+
+	template<>
+	std::vector& sqrt(std::vector& obj)
+	{
+		int i = 0;
+		for (int value : obj)
+		{
+			obj[i] = value * value;
+			++i;
+		}
+
+		return obj;
+	}
 };
 
 #endif
