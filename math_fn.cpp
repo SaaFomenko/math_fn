@@ -13,7 +13,7 @@ namespace math_fn
 	}
 
 	template<>
-	std::vector& sqrt(std::vector& obj)
+	std::vector<int>& sqrt(std::vector<int>& obj)
 	{
 		int i = 0;
 		for (int value : obj)
