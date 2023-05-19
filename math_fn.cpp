@@ -3,7 +3,6 @@
 
 #include <vector>
 
-
 namespace math_fn
 {
 	template<class T>
@@ -13,16 +12,18 @@ namespace math_fn
 	}
 
 	template<>
-	std::vector<int>& sqrt(std::vector<int>& obj)
+	std::vector<int> sqrt(std::vector<int> obj)
 	{
-		int i = 0;
+		std::vector<int> result{};
+		int x = 0;
+		
 		for (int value : obj)
 		{
-			obj[i] = value * value;
-			++i;
+			x = value * value;
+			result.push_back(x);
 		}
 
-		return obj;
+		return result;
 	}
 };
 
