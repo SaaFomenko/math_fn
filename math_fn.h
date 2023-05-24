@@ -36,10 +36,10 @@ namespace math_fn
 			std::vector<int>& arr;
 
 		public:
-			SumCountD(std::vector<int>& arr_, int devider_);
+			SumCountD(std::vector<int>& arr_, int devider_=0);
 			virtual ~SumCountD();
 
-			int operator()(bool isCount=false);
+			int operator()();
 	};
 };
 

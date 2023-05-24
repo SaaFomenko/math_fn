@@ -11,17 +11,23 @@ namespace math_fn
 	{
 		for (int value : arr)
 		{
-			suma += value;
-			if ((value % devider) == 0) ++count;
+			if (devider)
+			{
+				if ((value % devider) == 0) ++count;
+			}
+			else
+			{
+				suma += value;
+			}
 		}
 	}
 
 	SumCountD::~SumCountD()
 	{}
 
-	int SumCountD::operator()(bool isCount)
+	int SumCountD::operator()()
 	{
-		if (isCount)
+		if (devider)
 		{
 			return count;
 		}
