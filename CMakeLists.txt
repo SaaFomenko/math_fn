@@ -6,6 +6,7 @@ project(math_fn
 				LANGUAGES CXX)
 
 file(GLOB
+	public_header "*.h"
 	source "*.cpp")
 
-add_library(${PROJECT_NAME}_lib ${source})
+add_library(${PROJECT_NAME}_lib ${source} ${public_header})

@@ -1,30 +1,33 @@
-#ifndef MATH_FN_H
-#define MATH_FN_H
+#include "math_fn.h"
 
-#include <vector>
 
 namespace math_fn
 {
-	template<class T>
-	T sqrt(T obj)
+	SumCountD::SumCountD(std::vector<int>& arr_, int devider_) : 
+		arr(arr_),
+		suma(0),
+		count(0),
+		devider(devider_)
 	{
-		return obj * obj;
-	}
-
-	template<>
-	std::vector<int> sqrt(std::vector<int> obj)
-	{
-		std::vector<int> result{};
-		int x = 0;
-		
-		for (int value : obj)
+		for (int value : arr)
 		{
-			x = value * value;
-			result.push_back(x);
+			suma += value;
+			if ((value % devider) == 0) ++count;
 		}
-
-		return result;
 	}
-};
 
-#endif
+	SumCountD::~SumCountD()
+	{}
+
+	int SumCountD::operator()(bool isCount)
+	{
+		if (isCount)
+		{
+			return count;
+		}
+		else
+		{
+			return suma;
+		}
+	}
+}
